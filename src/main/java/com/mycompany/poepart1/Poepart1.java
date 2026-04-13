@@ -24,7 +24,7 @@ public class Poepart1 {
         System.out.print("Please enter Password >> ");
         String password = input.nextLine();
         
-        System.out.print("Please enter  Phone Number >> ");
+        System.out.print("Please enter  your Phone Number >> ");
         String cellPhone = input.nextLine();
         
         account user = new account(username, password, cellPhone, firstName, lastName);
