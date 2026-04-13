@@ -9,8 +9,8 @@ public class Poepart1 {
         //scanner 
         Scanner input = new Scanner(System.in);
         
-        //Registration Process 
-        System.out.println("=== Register ===");
+        //Registration Process
+        System.out.println("== Register ==");
        
         System.out.print("Please enter First Name >> ");
         String firstName = input.nextLine();
@@ -24,7 +24,7 @@ public class Poepart1 {
         System.out.print("Please enter Password >> ");
         String password = input.nextLine();
         
-        System.out.print("Please enter Cell Phone Number >> ");
+        System.out.print("Please enter  Phone Number >> ");
         String cellPhone = input.nextLine();
         
         account user = new account(username, password, cellPhone, firstName, lastName);
