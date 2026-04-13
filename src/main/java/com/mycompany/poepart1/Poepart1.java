@@ -39,7 +39,7 @@ public class Poepart1 {
         }
         
         //login process 
-        System.out.println("\n=== Login ===");
+        System.out.println("\n== Login ==");
       
         System.out.print("Enter your Username >> ");
         String logUsername = input.nextLine();
