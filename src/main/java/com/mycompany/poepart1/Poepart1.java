@@ -33,7 +33,7 @@ public class Poepart1 {
         System.out.println(result);
         
         // If registration failed, stop the program 
-        if (result.contains("invalid") || result.contains("weak")) {
+        if (result.contains("invalid") || result.contains(" very weak")) {
             input.close();
             return;
         }
