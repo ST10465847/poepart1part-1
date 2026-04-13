@@ -15,7 +15,7 @@ public class Poepart1 {
         System.out.print("Please enter First Name >> ");
         String firstName = input.nextLine();
         
-        System.out.print("Please enter Last Name >> ");
+        System.out.print("Please enter surname >> ");
         String lastName = input.nextLine();
         
         System.out.print("Please enter Username >> ");
