@@ -39,7 +39,7 @@ public class Poepart1 {
                 System.out.println(result);
                 
             } else if (loginChoice == 1) {
-                // Login
+                // Login process 
                 if (user == null) {
                     System.out.println("No account found. Please register first.");
                 } else {
