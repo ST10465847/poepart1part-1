@@ -21,7 +21,7 @@ public class Poepart1 {
             scan.nextLine();
             
             if (loginChoice == 2) {
-                // Register
+                // Registration process 
                 System.out.println("\n=== Register ===");
                 System.out.print("First Name >> ");
                 String firstName = scan.nextLine();
