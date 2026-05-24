@@ -17,7 +17,7 @@ public class Message  {
         // Get first 2 digits of ID
         String firstTwo = messageID.substring(0, 2);
         
-        // Get first word
+        //  GET THE FIRST WORD 
         String firstWord = "";
         for (int i = 0; i < message.length(); i++) {
             if (message.charAt(i) == ' ') {
