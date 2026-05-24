@@ -18,7 +18,7 @@ public class account {
         this.lastName = lastName;
     }
     
-    // CHECKING FOR  USERNAME
+    // CHECKING FOR  uSERNAME
     public boolean checkUserName() {
         boolean hasUnderscore = this.username.contains("_");
         boolean isShortEnough = this.username.length() <= 5;
