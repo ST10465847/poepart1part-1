@@ -52,7 +52,7 @@ public class Message {
         }
     }
     
-    // Check message length
+    // Check message length to processed 
     public String checkMessageLength(String message) {
         if (message.length() <= 250) {
             return "Message ready to send.";

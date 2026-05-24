@@ -18,7 +18,7 @@ public class account {
         this.lastName = lastName;
     }
     
-    // METHOD 1: CHECK USERNAME
+    // CHECKING FOR  USERNAME
     public boolean checkUserName() {
         boolean hasUnderscore = this.username.contains("_");
         boolean isShortEnough = this.username.length() <= 5;
@@ -30,7 +30,7 @@ public class account {
         }
     }
     
-    // METHOD 2: CHECK PASSWORD
+    // CHECK PASSWORD TO PROCESSED 
     public boolean checkPasswordComplexity() {
         
         if (this.password.length() < 8) {
@@ -79,7 +79,7 @@ public class account {
         return true;
     }
     
-    // METHOD 3: CHECK PHONE NUMBER
+    // CHECK PHONE NUMBER IF IT STARTS WITH +27
     public boolean checkCellPhoneNumber() {
        
         if (this.cellPhone.startsWith("+27") == false) {
@@ -100,7 +100,7 @@ public class account {
         return true;
     }
     
-    // METHOD 4: REGISTER USER
+    // REGISTER USER TO COLLECT USER DETAILS 
     public String registerUser() {
       
         if (checkUserName() == false) {
@@ -118,12 +118,12 @@ public class account {
         return "Registration complete! Account created successfully.";
     }
     
-    // METHOD 5: LOGIN USER
+    //  LOGIN USER
     public boolean loginUser(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
     }
     
-    // METHOD 6: RETURN LOGIN STATUS
+    //RETURN LOGIN STATUS TO PROCESSED 
     public String returnLoginStatus(String username, String password) {
         if (loginUser(username, password)) {
             return "Welcome " + this.firstName + " " + this.lastName + " it's good to have you back!";
