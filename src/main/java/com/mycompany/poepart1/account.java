@@ -79,7 +79,7 @@ public class account {
         return true;
     }
     
-    // CHECK PHONE NUMBER IF IT STARTS WITH +27
+    // CHECK PHONE NUMBER IF IT STARTS WITH +27 plus it must be 9 digts
     public boolean checkCellPhoneNumber() {
        
         if (this.cellPhone.startsWith("+27") == false) {
