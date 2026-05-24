@@ -58,7 +58,7 @@ public class Poepart1 {
             }
         }
         
-        // Arrays to store messages (simple, no ArrayList)
+        // Arrays to store messages 
         String[] savedIDs = new String[100];
         String[] savedHashes = new String[100];
         String[] savedRecipients = new String[100];
