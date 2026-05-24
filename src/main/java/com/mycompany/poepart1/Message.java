@@ -43,7 +43,7 @@ public class Message {
         return firstTwo + ":" + msgNumber + ":" + firstWord + lastWord;
     }
     
-    // Check recipient cell number
+    // Check user cell number
     public String checkRecipientCell(String cellNumber) {
         if (cellNumber.startsWith("+27") && cellNumber.length() == 12) {
             return "Cell phone number successfully captured.";
