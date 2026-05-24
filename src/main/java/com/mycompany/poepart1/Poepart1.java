@@ -10,7 +10,7 @@ public class Poepart1 {
         account user = null;
         boolean loggedIn = false;
         
-        System.out.println("=== Welcome to QuickChat ===");
+        System.out.println("=== Welcome to QuickChat ====");
         
         // LOGIN OR REGISTER FIRST to processed 
         while (loggedIn == false) {
