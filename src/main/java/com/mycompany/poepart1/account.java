@@ -132,7 +132,7 @@ public class account {
         }
     }
     
-    // GETTER METHODS (ADD THESE)
+    // GETTER METHODS 
     public String getUsername() {
         return username;
     }

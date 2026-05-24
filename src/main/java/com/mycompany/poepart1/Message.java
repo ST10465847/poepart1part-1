@@ -43,7 +43,7 @@ public class Message {
         return firstTwo + ":" + msgNumber + ":" + firstWord + lastWord;
     }
     
-    // Check user cell number if its good to procced 
+    // Check user cell number if its good to procced
     public String checkRecipientCell(String cellNumber) {
         if (cellNumber.startsWith("+27") && cellNumber.length() == 12) {
             return "Cell phone number successfully captured.";
@@ -62,11 +62,11 @@ public class Message {
         }
     }
     
-    // Get user choice (Send, Disregard, Store)
+    // Get user choice (Send, Delete, Store)
     public String getUserChoice(java.util.Scanner scan) {
         System.out.println("\nWhat would you like to do?");
         System.out.println("1. Send Message");
-        System.out.println("2. Disregard Message");
+        System.out.println("2. Delete Message");
         System.out.println("3. Store Message");
         System.out.print("Choose >> ");
         

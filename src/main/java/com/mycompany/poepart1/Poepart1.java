@@ -142,7 +142,7 @@ public class Poepart1 {
                     }
                 }
                 
-                // Show all messages
+                // Show all messages so user can see or choose 
                 System.out.println("\n=== All Messages ===");
                 for (int i = 0; i < msgCount; i++) {
                     System.out.println("Message ID: " + savedIDs[i]);
@@ -157,7 +157,7 @@ public class Poepart1 {
             } else if (choice == 2) {
                 System.out.println("Coming Soon - Feature still in development.");
             } else if (choice == 3) {
-                System.out.println("Goodbye!");
+                System.out.println("Goodbye hope to see you soon!");
             } else {
                 System.out.println("Invalid choice. Try again.");
             }
