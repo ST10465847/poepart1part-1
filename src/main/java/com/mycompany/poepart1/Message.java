@@ -2,7 +2,7 @@ package com.mycompany.poepart1;
 
 public class Message {
     
-    // Create random message ID (10 digits) - same as lecturer
+    // Create random message ID (10 digits)
     public String createMessageID() {
         String id = "";
         for (int i = 0; i < 10; i++) {
@@ -12,7 +12,7 @@ public class Message {
         return id;
     }
     
-    // Create message hash - same as lecturer but with uppercase
+    // Create message hash 
     public String createMsgHash(String messageID, String message, int msgNumber) {
         // Get first 2 digits of ID
         String firstTwo = messageID.substring(0, 2);
