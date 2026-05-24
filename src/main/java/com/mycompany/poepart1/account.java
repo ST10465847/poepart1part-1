@@ -30,7 +30,7 @@ public class account {
         }
     }
     
-    // CHECK PASSWORD TO PROCESSED 
+    // CHECK PASSWORD TO PROCESSED  to the next step
     public boolean checkPasswordComplexity() {
         
         if (this.password.length() < 8) {
