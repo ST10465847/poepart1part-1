@@ -1,4 +1,5 @@
 package com.mycompany.poepart1;
+
 public class account {
    
     private String username;
@@ -7,7 +8,7 @@ public class account {
     private String firstName;
     private String lastName;
     
-    //contractor
+    // Constructor
     public account(String username, String password, String cellPhone, 
                    String firstName, String lastName) {
         this.username = username;
@@ -17,14 +18,11 @@ public class account {
         this.lastName = lastName;
     }
     
-    //Cheaking for userName 
-    // Username must contain _ and be 5 characters or less
+    // METHOD 1: CHECK USERNAME
     public boolean checkUserName() {
-        //Cheaking if username has underscore and length is 5 or less
         boolean hasUnderscore = this.username.contains("_");
-       
         boolean isShortEnough = this.username.length() <= 5;
-       //Return if both are true 
+        
         if (hasUnderscore && isShortEnough) {
             return true;
         } else {
@@ -32,14 +30,13 @@ public class account {
         }
     }
     
-    // Cheaking Password must have: 8+ chars, capital letter, number, special character
+    // METHOD 2: CHECK PASSWORD
     public boolean checkPasswordComplexity() {
         
         if (this.password.length() < 8) {
             return false;
         }
         
-       // Check if capital letter (A to Z)are added
         boolean hasCapital = false;
         for (int i = 0; i < this.password.length(); i++) {
             char c = this.password.charAt(i);
@@ -52,7 +49,6 @@ public class account {
             return false;
         }
         
-        // cheaking for numbers(0 to 9)
         boolean hasNumber = false;
         for (int i = 0; i < this.password.length(); i++) {
             char c = this.password.charAt(i);
@@ -65,7 +61,6 @@ public class account {
             return false;
         }
         
-        //Cheaking for special character (not letter, not number)
         boolean hasSpecial = false;
         for (int i = 0; i < this.password.length(); i++) {
             char c = this.password.charAt(i);
@@ -84,7 +79,7 @@ public class account {
         return true;
     }
     
-    // Cheaking Number Phone must start with +27 and have 9 digits after
+    // METHOD 3: CHECK PHONE NUMBER
     public boolean checkCellPhoneNumber() {
        
         if (this.cellPhone.startsWith("+27") == false) {
@@ -105,7 +100,7 @@ public class account {
         return true;
     }
     
-   //REGISTRATION OUTCOMES 
+    // METHOD 4: REGISTER USER
     public String registerUser() {
       
         if (checkUserName() == false) {
@@ -113,28 +108,48 @@ public class account {
         }
         
         if (checkPasswordComplexity() == false) {
-            return " Your Password is too weak. Needs 8+ chars, a CAPITAL letter, a number, and a special character like !@#.";
+            return "Your Password is too weak. Needs 8+ chars, a CAPITAL letter, a number, and a special character like !@#.";
         }
        
         if (checkCellPhoneNumber() == false) {
             return "The Phone number is invalid. Must start with +27 and have 9 digits after.";
         }
         
-        //If all checks passed 
         return "Registration complete! Account created successfully.";
     }
     
-    //user loged in
+    // METHOD 5: LOGIN USER
     public boolean loginUser(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
     }
     
-    // Return Login User Staus 
+    // METHOD 6: RETURN LOGIN STATUS
     public String returnLoginStatus(String username, String password) {
         if (loginUser(username, password)) {
-            return " Welcome " + this.firstName + " " + this.lastName + "its to  good to have you back!.";
+            return "Welcome " + this.firstName + " " + this.lastName + " it's good to have you back!";
         } else {
             return "Wrong username or password. Please try again.";
         }
+    }
+    
+    // GETTER METHODS (ADD THESE)
+    public String getUsername() {
+        return username;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    
+    public String getFirstName() {
+        return firstName;
+    }
+    
+    public String getLastName() {
+        return lastName;
+    }
+    
+    public String getCellPhone() {
+        return cellPhone;
     }
 }
