@@ -123,7 +123,7 @@ public class account {
         return this.username.equals(username) && this.password.equals(password);
     }
     
-    //RETURN LOGIN STATUS TO PROCESSED 
+    //RETURN LOGIN STATUS TO processed 
     public String returnLoginStatus(String username, String password) {
         if (loginUser(username, password)) {
             return "Welcome " + this.firstName + " " + this.lastName + " it's good to have you back!";
