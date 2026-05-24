@@ -36,14 +36,14 @@ public class Message {
         }
         lastWord = message.substring(lastSpace + 1);
         
-        // Make uppercase
+        // Make uppercase in oder to processed 
         firstWord = firstWord.toUpperCase();
         lastWord = lastWord.toUpperCase();
         
         return firstTwo + ":" + msgNumber + ":" + firstWord + lastWord;
     }
     
-    // Check user cell number
+    // Check user cell number if its good to procced 
     public String checkRecipientCell(String cellNumber) {
         if (cellNumber.startsWith("+27") && cellNumber.length() == 12) {
             return "Cell phone number successfully captured.";
