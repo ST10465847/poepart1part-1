@@ -25,7 +25,7 @@ public class Poepart1 {
                 System.out.println("\n=== Register ===");
                 System.out.print("First Name >> ");
                 String firstName = scan.nextLine();
-                System.out.print("Last Name >> ");
+                System.out.print("surname >> ");
                 String lastName = scan.nextLine();
                 System.out.print("Username (must contain _ and be 5 or less chars) >> ");
                 String username = scan.nextLine();
