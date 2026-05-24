@@ -34,7 +34,7 @@ This is a Chat App with registration, login, and message sending features.
 |-------|---------|
 | Username | sin_9 |
 | Password | Sithol_@9 |
-| Phone | +27799495626 |
+| Phone | +277994956677 |
 | Recipient | +27718693002 |
 | Message | Hi Mike, can you join us for dinner tonight? |
 
