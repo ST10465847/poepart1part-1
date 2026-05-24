@@ -118,7 +118,7 @@ public class account {
         return "Registration complete! Account created successfully.";
     }
     
-    //  LOGIN USER
+    //  LOGIN USER wanted details
     public boolean loginUser(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
     }
