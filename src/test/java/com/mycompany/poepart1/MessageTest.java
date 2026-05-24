@@ -1,13 +1,13 @@
-package com.mycompany.poepart1;
+package com.mycompany.poepart1 ;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test ;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MessageTest {
+public class MessageTest{
     
-    Message msg = new Message();
+    Message msg = new Message ();
     
-    // TEST 1: Message length is OK (250 chars or less)
+    // test 1: Message length is OK (250 chars or less)
     @Test
     public void testMessageLengthSuccess() {
         String shortMessage = "Hi Mike, can you join us for dinner tonight?";
@@ -15,7 +15,7 @@ public class MessageTest {
         assertEquals("Message ready to send.", result);
     }
     
-    // TEST 2: Message exceeds 250 characters
+    // TEST 2: CAN SEND THE MESSAGE UP TO 250 LETTERS 
     @Test
     public void testMessageLengthFailure() {
         String longMessage = "This is a very long message that is going to be more than two hundred and fifty characters long. I am typing a lot of words to make sure that the message exceeds the limit. This is for testing purposes only. I need to keep typing until I reach over 250 characters. This should be enough now I think.";
@@ -64,7 +64,7 @@ public class MessageTest {
         assertTrue(hash.length() > 5);
     }
     
-    // TEST 8: Message hash has uppercase letters
+    // TEST 8: MESSAGE HAS HAS UPPERCASE LETTERS 
     @Test
     public void testMessageHashUppercase() {
         String messageID = "1234567890";

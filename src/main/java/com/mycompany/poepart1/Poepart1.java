@@ -69,7 +69,7 @@ public class Poepart1 {
         
         Message msgObj = new Message();
         
-        // MAIN MENU LOOP
+        // MAIN MENU LOOPS
         int choice = 0;
         while (choice != 3) {
             System.out.println("\n=== Main Menu ===");
@@ -102,7 +102,7 @@ public class Poepart1 {
                         continue;
                     }
                     
-                    // Check message length
+                    // Check message length that will be sent
                     String lengthCheck = msgObj.checkMessageLength(messageText);
                     if (!lengthCheck.equals("Message ready to send.")) {
                         System.out.println(lengthCheck);
@@ -142,7 +142,7 @@ public class Poepart1 {
                     }
                 }
                 
-                // Show all messages so user can see or choose 
+                // Show all messages so user can see or CHOSSE
                 System.out.println("\n=== All Messages ===");
                 for (int i = 0; i < msgCount; i++) {
                     System.out.println("Message ID: " + savedIDs[i]);
