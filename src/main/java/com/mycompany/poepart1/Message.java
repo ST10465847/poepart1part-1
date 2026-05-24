@@ -36,7 +36,7 @@ public class Message  {
         }
         lastWord = message.substring(lastSpace + 1);
         
-        // Make uppercase in oder to processed 
+        // Make UPPERCASE in oder to processed 
         firstWord = firstWord.toUpperCase();
         lastWord = lastWord.toUpperCase();
         
