@@ -1,6 +1,6 @@
 package com.mycompany.poepart1;
 
-public class Message {
+public class Message  {
     
     // Create random message ID (10 digits)
     public String createMessageID() {
@@ -12,7 +12,7 @@ public class Message {
         return id;
     }
     
-    // Create message hash 
+    // Create message HASH
     public String createMsgHash(String messageID, String message, int msgNumber) {
         // Get first 2 digits of ID
         String firstTwo = messageID.substring(0, 2);
@@ -26,7 +26,7 @@ public class Message {
             }
         }
         
-        // Get last word
+        // Get last word of the meaage 
         String lastWord = "";
         int lastSpace = 0;
         for (int i = 0; i < message.length(); i++) {
@@ -48,11 +48,11 @@ public class Message {
         if (cellNumber.startsWith("+27") && cellNumber.length() == 12) {
             return "Cell phone number successfully captured.";
         } else {
-            return "Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.";
+            return "Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again to aviod being sent to wron number .";
         }
     }
     
-    // Check message length to processed 
+    // Check message length to processed to send message
     public String checkMessageLength(String message) {
         if (message.length() <= 250) {
             return "Message ready to send.";
