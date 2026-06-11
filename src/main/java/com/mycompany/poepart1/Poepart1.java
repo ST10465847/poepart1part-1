@@ -23,7 +23,7 @@ public class Poepart1 {
             scan.nextLine();
             
             if (loginChoice == 2) {
-                // Registration process 
+                // Registration process in order to proceesed with quickChat 
                 System.out.println("\n=== Register ===");
                 System.out.print("First Name >> ");
                 String firstName = scan.nextLine();
