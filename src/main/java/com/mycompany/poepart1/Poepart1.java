@@ -147,7 +147,7 @@ public class Poepart1 {
         
         System.out.println("Loaded " + msgCount + " test messages.");
         
-        // ========== MAIN MENU LOOP (Updated - Option 3 is now Stored Messages, Option 4 is Quit) ==========
+        // ========== MAIN MENU LOOP(Updated - Option 3 is now Stored Messages, Option 4 is Quit) ==========
         int choice = 0;
         while (choice != 4) {
             System.out.println("\n=== Main Menu ===");
@@ -173,7 +173,7 @@ public class Poepart1 {
                     System.out.print("Enter your message (max 250 chars) >> ");
                     String messageText = scan.nextLine();
                     
-                    // Check phone number
+                    // Checking your phone number if it starts with +27
                     String phoneCheck = msgObj.checkRecipientCell(recipient);
                     if (!phoneCheck.equals("Cell phone number successfully captured.")) {
                         System.out.println(phoneCheck);
@@ -181,7 +181,7 @@ public class Poepart1 {
                         continue;
                     }
                     
-                    // Check message length that will be sent
+                    // Checking message length that will be sent
                     String lengthCheck = msgObj.checkMessageLength(messageText);
                     if (!lengthCheck.equals("Message ready to send.")) {
                         System.out.println(lengthCheck);
@@ -189,11 +189,11 @@ public class Poepart1 {
                         continue;
                     }
                     
-                    // Create message ID and Hash
+                    // Createing  message ID and Hash
                     String messageID = msgObj.createMessageID();
                     String messageHash = msgObj.createMsgHash(messageID, messageText, i);
                     
-                    // Show message details
+                    // Showing message details
                     System.out.println("\n--- Message Details ---");
                     System.out.println("Message ID: " + messageID);
                     System.out.println("Hash Code: " + messageHash);
@@ -244,7 +244,7 @@ public class Poepart1 {
                 System.out.println("Coming Soon - Feature still in development.");
                 
             } else if (choice == 3) {
-                // ========== PART 3 - STORED MESSAGES MENU ==========
+                // ========== STORED MESSAGES MENU ==========
                 System.out.println("\n=== Stored Messages Menu ===");
                 System.out.println("a. Display sender and recipient of all stored messages");
                 System.out.println("b. Display the longest stored message");
@@ -371,8 +371,7 @@ public class Poepart1 {
     }
     
     // ========== JSON METHODS for storing messages ==========
-    // Reference: GeeksforGeeks. (2026). Java JSON Parsing.
-    
+   
     public static void saveMessagesToJSON(String[] ids, String[] hashes, String[] recipients, String[] messages, String[] status, int count) {
         try {
             FileWriter writer = new FileWriter("messages.json");
