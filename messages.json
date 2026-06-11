@@ -1,0 +1,11 @@
+{
+  "messages": [
+    {
+      "messageID": "1234567890",
+      "messageHash": "12:1:HICAKE",
+      "recipient": "+27834557896",
+      "message": "Did you get the cake?",
+      "status": "Sent"
+    }
+  ]
+}

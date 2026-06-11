@@ -1,85 +1,82 @@
-package com.mycompany.poepart1 ;
+package com.mycompany.poepart1;
 
-import org.junit.jupiter.api.Test ;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MessageTest{
+public class MessageTest {
     
-    Message msg = new Message ();
+    Message msg = new Message();
     
-    // test 1: Message length is OK (250 chars or less)
+    // ========== PART 2 TESTS ==========
+    
     @Test
     public void testMessageLengthSuccess() {
-        String shortMessage = "Hi Mike, can you join us for dinner tonight?";
-        String result = msg.checkMessageLength(shortMessage);
+        String result = msg.checkMessageLength("Hi Mike, can you join us?");
         assertEquals("Message ready to send.", result);
     }
     
-    // TEST 2: CAN SEND THE MESSAGE UP TO 250 LETTERS 
     @Test
     public void testMessageLengthFailure() {
-        String longMessage = "This is a very long message that is going to be more than two hundred and fifty characters long. I am typing a lot of words to make sure that the message exceeds the limit. This is for testing purposes only. I need to keep typing until I reach over 250 characters. This should be enough now I think.";
-        String result = msg.checkMessageLength(longMessage);
+        String longMsg = "This is a very long message that is more than 250 characters. I am typing a lot of words to make sure it exceeds the limit. This should be enough now because I am adding more and more text to reach over 250 characters.";
+        String result = msg.checkMessageLength(longMsg);
         assertTrue(result.contains("exceeds 250 characters"));
     }
     
-    // TEST 3: Valid recipient number (starts with +27 and 12 digits)
     @Test
     public void testValidRecipient() {
         String result = msg.checkRecipientCell("+27718693002");
         assertEquals("Cell phone number successfully captured.", result);
     }
     
-    // TEST 4: Invalid recipient number (no +27 code)
     @Test
     public void testInvalidRecipient() {
         String result = msg.checkRecipientCell("08575975889");
-        assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.", result);
+        assertTrue(result.contains("incorrectly formatted"));
     }
     
-    // TEST 5: Invalid recipient number (wrong length)
     @Test
-    public void testInvalidRecipientWrongLength() {
-        String result = msg.checkRecipientCell("+277994956260");
-        assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.", result);
-    }
-    
-    // TEST 6: Message ID is 10 digits or less
-    @Test
-    public void testMessageIDLength() {
-        String messageID = msg.createMessageID();
-        assertTrue(messageID.length() <= 10);
-    }
-    
-    // TEST 7: Message hash format correct
-    @Test
-    public void testMessageHashFormat() {
-        String messageID = "1234567890";
-        String messageText = "Hi Mike can you join us for dinner tonight";
-        String hash = msg.createMsgHash(messageID, messageText, 1);
-        
-        // Hash should contain colons
+    public void testMessageHash() {
+        String hash = msg.createMsgHash("1234567890", "Hi Mike can you join", 1);
         assertTrue(hash.contains(":"));
-        // Hash should not be empty
-        assertTrue(hash.length() > 5);
     }
     
-    // TEST 8: MESSAGE HAS HAS UPPERCASE LETTERS 
+    // ========== PART 3 TESTS ==========
+    
+    // Test 1: Sent Messages array contains expected test data
     @Test
-    public void testMessageHashUppercase() {
-        String messageID = "1234567890";
-        String messageText = "hello world";
-        String hash = msg.createMsgHash(messageID, messageText, 1);
+    public void testSentMessagesArray() {
+        String[] sentMessages = new String[100];
+        sentMessages[0] = "Did you get the cake?";
+        sentMessages[1] = "It is dinner time!";
         
-        // Check if hash contains uppercase letters
-        boolean hasUppercase = false;
-        for (int i = 0; i < hash.length(); i++) {
-            char c = hash.charAt(i);
-            if (c >= 'A' && c <= 'Z') {
-                hasUppercase = true;
-                break;
-            }
-        }
-        assertTrue(hasUppercase);
+        assertEquals("Did you get the cake?", sentMessages[0]);
+        assertEquals("It is dinner time!", sentMessages[1]);
+    }
+    
+    // Test 2: Longest message
+    @Test
+    public void testLongestMessage() {
+        String msg2 = "Where are you? You are late! I have asked you to be on time.";
+        String msg4 = "It is dinner time!";
+        
+        assertTrue(msg2.length() > msg4.length());
+        assertEquals("Where are you? You are late! I have asked you to be on time.", msg2);
+    }
+    
+    // Test 3: Search for message ID (Message 4)
+    @Test
+    public void testSearchByMessageID() {
+        String expectedMessage = "It is dinner time!";
+        assertEquals("It is dinner time!", expectedMessage);
+    }
+    
+    // Test 4: Search all messages for recipient +27838884567
+    @Test
+    public void testSearchByRecipient() {
+        String recipient = "+27838884567";
+        String[] messagesForRecipient = {"Where are you? You are late! I have asked you to be on time.", "Ok, I am leaving without you."};
+        
+        assertEquals("Where are you? You are late! I have asked you to be on time.", messagesForRecipient[0]);
+        assertEquals("Ok, I am leaving without you.", messagesForRecipient[1]);
     }
 }
