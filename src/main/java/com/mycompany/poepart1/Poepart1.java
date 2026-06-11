@@ -41,7 +41,7 @@ public class Poepart1 {
                 System.out.println(result);
                 
             } else if (loginChoice == 1) {
-                // Login process 
+                // Login process after finnshing the registation process  
                 if (user == null) {
                     System.out.println("No account found. Please register first.");
                 } else {
@@ -60,12 +60,12 @@ public class Poepart1 {
             }
         }
         
-        // ========== PART 3 - NEW ARRAYS for storing messages by type ==========
+        // ARRAYS for storing messages by type===
         String[] sentMessagesArray = new String[100];
         String[] disregardedMessagesArray = new String[100];
         String[] storedMessagesArray = new String[100];
         
-        // Arrays to store all messages (keep your existing ones)
+        // Arrays to store all message 
         String[] savedIDs = new String[100];
         String[] savedHashes = new String[100];
         String[] savedRecipients = new String[100];
@@ -80,7 +80,7 @@ public class Poepart1 {
         
         Message msgObj = new Message();
         
-        // ========== PART 3 - LOAD TEST DATA FROM ASSIGNMENT ==========
+        //========== PART 3 - LOAD TEST DATA FROM ASSIGNMENT ==========
         System.out.println("\n=== Loading Test Data ===");
         
         // Test Message 1 - Sent
