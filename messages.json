@@ -1,11 +1,53 @@
 {
   "messages": [
     {
-      "messageID": "1234567890",
-      "messageHash": "12:1:HICAKE",
+      "messageID": "1629779067",
+      "messageHash": "16:1:DIDCAKE?",
       "recipient": "+27834557896",
       "message": "Did you get the cake?",
       "status": "Sent"
+    },
+    {
+      "messageID": "1577092651",
+      "messageHash": "15:2:WHERETIME.",
+      "recipient": "+27838884567",
+      "message": "Where are you? You are late! I have asked you to be on time.",
+      "status": "Stored"
+    },
+    {
+      "messageID": "2672801516",
+      "messageHash": "26:3:YOHOOOO,GATE.",
+      "recipient": "+27834484567",
+      "message": "Yohoooo, I am at your gate.",
+      "status": "Disregard"
+    },
+    {
+      "messageID": "0173653861",
+      "messageHash": "01:4:ITTIME!",
+      "recipient": "0838884567",
+      "message": "It is dinner time!",
+      "status": "Sent"
+    },
+    {
+      "messageID": "5151566434",
+      "messageHash": "51:5:OK,YOU.",
+      "recipient": "+27838884567",
+      "message": "Ok, I am leaving without you.",
+      "status": "Stored"
+    },
+    {
+      "messageID": "1405644937",
+      "messageHash": "14:1:HEYZEE",
+      "recipient": "+27799495626",
+      "message": "hey i hope you are well this is my number zee",
+      "status": "Sent"
+    },
+    {
+      "messageID": "7742578987",
+      "messageHash": "77:3:SIBAKHELE24TH",
+      "recipient": "+27799495624",
+      "message": "sibakhele is coming back on the 24th",
+      "status": "Stored"
     }
   ]
 }

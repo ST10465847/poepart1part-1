@@ -7,7 +7,7 @@ public class MessageTest {
     
     Message msg = new Message();
     
-    // ========== PART 2 TESTS ==========
+    // ======== PART 2 TESTS =======
     
     @Test
     public void testMessageLengthSuccess() {
