@@ -80,7 +80,7 @@ public class Poepart1 {
         
         Message msgObj = new Message();
         
-        //========== PART 3 - LOAD TEST DATA FROM ASSIGNMENT ==========
+        //========== PART 3 - LOAD  DATA ==========
         System.out.println("\n=== Loading Test Data ===");
         
         // Test Message 1 - Sent
