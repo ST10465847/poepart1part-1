@@ -147,7 +147,7 @@ public class Poepart1 {
         
         System.out.println("Loaded " + msgCount + " test messages.");
         
-        // ========== MAIN MENU LOOP(Updated - Option 3 is now Stored Messages, Option 4 is Quit) ==========
+        // ======== MAIN MENU LOOP(Updated - Option 3 is now Stored Messages, Option 4 is Quit) ==========
         int choice = 0;
         while (choice != 4) {
             System.out.println("\n=== Main Menu ===");
@@ -350,7 +350,7 @@ public class Poepart1 {
                 
             } else if (choice == 4) {
                 System.out.println("Goodbye hope to see you soon!");
-                // Save messages to JSON file before exiting
+                // Saveing  messages to JSON file before exiting
                 saveMessagesToJSON(savedIDs, savedHashes, savedRecipients, savedMessages, savedStatus, msgCount);
             } else {
                 System.out.println("Invalid choice. Try again.");
@@ -360,7 +360,7 @@ public class Poepart1 {
         scan.close();
     }
     
-    // Helper method to get recipient for a message
+    // Helper method IT IS to get recipient for a message
     public static String getRecipientForMessage(String message, String[] recipients, String[] messages, int total) {
         for (int i = 0; i < total; i++) {
             if (messages[i] != null && messages[i].equals(message)) {
@@ -370,7 +370,7 @@ public class Poepart1 {
         return "Unknown";
     }
     
-    // ========== JSON METHODS for storing messages ==========
+    // ====== JSON METHODS for storing messages ======
    
     public static void saveMessagesToJSON(String[] ids, String[] hashes, String[] recipients, String[] messages, String[] status, int count) {
         try {
